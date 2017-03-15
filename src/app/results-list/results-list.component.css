@@ -18,14 +18,21 @@ li {
     font-family: Arial, sans-serif;
     font-size:15px;
     overflow:hidden;
+    transition:background 0.3s;
 }
 
 li:hover {
-    background:#DDD;
+    background:#EEE;
+    transition:none;
+
 }
 
 li:last-child {
     border:0;
+}
+
+li:not(.single-msg):active {
+    background:#CCC;
 }
 
 li.single-msg {

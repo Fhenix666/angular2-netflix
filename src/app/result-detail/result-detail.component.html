@@ -1,7 +1,7 @@
-<div *ngIf="item">
+<div *ngIf="item" class="wrapper">
     <div class="poster" [ngStyle]="{'background-image': 'url(' + posterImg.changingThisBreaksApplicationSecurity + ')'}">
     </div>
     <p class="footer">
-        {{ item.director}} / {{ item.release_year }}
+        {{ item.director || '?' }} / {{ item.release_year || '?' }}
     </p>
 </div>

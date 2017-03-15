@@ -1,8 +1,12 @@
+.wrapper {
+    margin-top:16px;
+}
+
 .poster {
     background-position:center center;
     background-size:contain;
     background-repeat:no-repeat;
-    height:261px;
+    height:220px;
     border:solid 1px #000;
 }
 
