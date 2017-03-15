@@ -1,1 +1,1 @@
-<input type="text" placeholder="Search..."><span class="fav"></span> <span (click)="search()">Search now</span>
+<input type="text" placeholder="Search..." [formControl]="_inputText" (keydown)="PlaceLoading()"><span class="fav"></span>

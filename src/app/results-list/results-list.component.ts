@@ -21,6 +21,9 @@ export class ResultsListComponent {
         this.apiService.results.subscribe(
             (res) => {
                 this.results = res;
+            },
+            (err) => {
+                this.results = err;
             }
         )
     }

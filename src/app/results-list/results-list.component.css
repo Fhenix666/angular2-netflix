@@ -1,3 +1,43 @@
 ol {
     list-style: none;
+    height:240px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    padding:0;
+    border:solid 1px #000;
+}
+
+li {
+    display: block;
+    height:40px;
+    line-height:40px;
+    margin:0;
+    padding:0 10px;
+    cursor:pointer;
+    border-bottom:solid 1px #000;
+}
+
+li:hover {
+    background:#DDD;
+}
+
+li:last-child {
+    border:0;
+}
+
+li.single-msg {
+    height:auto;
+    line-height:inherit;
+    text-align: center;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+li.loading {
+    color:#0000CC;
+}
+
+li.error {
+    color:#CC0000;
 }

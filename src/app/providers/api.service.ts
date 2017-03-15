@@ -24,8 +24,14 @@ export class ApiService {
                 this.results.next(val.json());
             },
             (err) => {
-                alert('Error!');
                 console.log(err);
+                if(err.status != 200){
+                    let errorRow = [{
+                        show_id: -1,
+                        show_title: JSON.parse(err._body).message
+                    }];
+                    this.results.next(errorRow);
+                }
             }
         );
     }
