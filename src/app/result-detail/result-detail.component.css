@@ -1,0 +1,19 @@
+.poster {
+    background-position:center center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:261px;
+    border:solid 1px #000;
+}
+
+.footer {
+    margin:0;
+    padding:0;
+    border:solid 1px #000;
+    border-top:0;
+    height:20px;
+    line-height:20px;
+    text-align: center;
+    background:#000;
+    color:#FFF;
+}

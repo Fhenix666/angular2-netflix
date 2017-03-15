@@ -4,6 +4,7 @@ input {
     height:24px;
     padding:0 5px;
     border:solid 1px #000;
+    font-size:15px;
 }
 
 .fav {

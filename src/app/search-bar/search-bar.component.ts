@@ -36,6 +36,6 @@ export class SearchBarComponent {
             show_id: -2,
             show_title: 'Loading results...'
         }];
-        this.apiService.results.next(loadingRow);
+        this.apiService.SetResultsInfo(loadingRow);
     }
 }

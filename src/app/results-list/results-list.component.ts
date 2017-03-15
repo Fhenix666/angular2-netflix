@@ -27,4 +27,8 @@ export class ResultsListComponent {
             }
         )
     }
+
+    SetItem(item){
+        this.apiService.SetSelectedItem(item);
+    }
 }

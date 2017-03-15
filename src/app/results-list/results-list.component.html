@@ -1,4 +1,6 @@
 <ol>
     <li *ngFor="let result of results; let i = index"
-        class="{{result.show_id == -1 ? 'single-msg error' : ''}} {{result.show_id == -2 ? 'single-msg loading' : ''}}">{{ result.show_title }}</li>
+        class="{{result.show_id == -1 ? 'single-msg error' : ''}} {{result.show_id == -2 ? 'single-msg loading' : ''}}"
+        (click)="SetItem(result)"
+    >{{ result.show_title }}</li>
 </ol>
