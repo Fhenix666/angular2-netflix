@@ -1,6 +1,7 @@
 <div class="search-wrapper">
-    <input type="text" placeholder="Search..." [formControl]="_inputText" (keydown)="PlaceLoading()"><span class="fav"></span>
+    <input type="text" placeholder="Search..." [formControl]="_inputText" (keydown)="PlaceLoading()">
+    <span (click)="AddFav(_inputText.value)" class="fav {{_favButtonDisabled ? 'disabled' : ''}} {{_highlight ? 'spin' : ''}}"></span>
 </div>
 <ul class="favs">
-
+    <li *ngFor="let fav of top3favs">{{ fav.query }} - {{ fav.favCount }}</li>
 </ul>

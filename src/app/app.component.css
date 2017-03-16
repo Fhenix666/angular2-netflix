@@ -1,4 +1,36 @@
+.disabled {
+    opacity:0.2;
+    pointer-events: none;
+    position:relative;
+    overflow: hidden;
+}
+
+.disabled:before {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    display: block;
+    pointer-events:all;
+    cursor:not-allowed;
+}
+
 app-search-bar {
     display: block;
     overflow: hidden;
+}
+
+.main-wrapper {
+    max-width:1024px;
+    margin:0 auto
+}
+
+.left-col {
+    width:49%;
+    float:left;
+}
+
+.right-col {
+    width:49%;
+    float:right;
 }

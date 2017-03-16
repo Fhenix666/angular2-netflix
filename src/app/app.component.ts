@@ -8,5 +8,19 @@ import { ResultsListComponent } from "./results-list/results-list.component";
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'app works!';
+
+    private storageEnabled: boolean;
+
+    constructor(){
+        this.CheckStorageAvailability();
+    }
+
+    CheckStorageAvailability(){
+        if (typeof(Storage) !== "undefined") {
+            this.storageEnabled = true;
+        } else {
+            alert('Please, enable LocalStorage in your browser.');
+            this.storageEnabled = false;
+        }
+    }
 }

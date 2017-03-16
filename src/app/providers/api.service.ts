@@ -20,25 +20,27 @@ export class ApiService {
     }
 
     public SearchByActor(name: string) {
-        name = encodeURI(name);
-        let results: videoEntity;
+        return new Promise(function(resolve, reject){
+            name = encodeURI(name);
+            let results: videoEntity;
 
-        this._http.get(this._url + 'actor=' + name).subscribe(
-            (val: Response) => {
-                results = val.json();
-                this.SetResultsInfo(results);
-            },
-            (err) => {
-                console.log(err);
-                if(err.status != 200){
+            this._http.get(this._url + 'actor=' + name).subscribe(
+                (val: Response) => {
+                    results = val.json();
+                    this.SetResultsInfo(results);
+                    resolve();
+                },
+                (err) => {
+                    console.log(err);
                     let errorRow = [{
                         show_id: -1,
                         show_title: JSON.parse(err._body).message
                     }];
                     this.SetResultsInfo(errorRow);
+                    reject();
                 }
-            }
-        );
+            );
+        }.bind(this));
     }
 
     public SetResultsInfo(data) {

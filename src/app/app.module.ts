@@ -9,6 +9,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ResultsListComponent } from './results-list/results-list.component';
 import { ApiService } from "./providers/api.service";
 import { ResultDetailComponent } from './result-detail/result-detail.component';
+import {FavsService} from "./providers/favs.service";
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ResultDetailComponent } from './result-detail/result-detail.component';
         HttpModule
     ],
     providers: [
-        ApiService
+        ApiService,
+        FavsService
     ],
     bootstrap: [AppComponent]
 })

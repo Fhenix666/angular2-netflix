@@ -1,11 +1,13 @@
-<div style="max-width:1024px;margin:0 auto">
+<div style="" class="main-wrapper {{storageEnabled ? '' : 'disabled'}}">
     <h1>Netflix Search Application</h1>
 
     <app-search-bar></app-search-bar>
-    <div style="width:49%;float:left;">
+
+    <div class="left-col">
         <app-results-list></app-results-list>
     </div>
-    <div style="width:49%;float:right">
+
+    <div class="right-col">
         <app-result-detail></app-result-detail>
     </div>
 </div>
